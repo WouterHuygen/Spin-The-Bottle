@@ -8,7 +8,17 @@
     android:orientation="vertical"
     tools:context="com.example.wouter.spinthebottle.MainActivity">
 
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
 
+        <ImageView
+            android:src="@drawable/spinrr"
+            android:layout_width="300dp"
+            android:layout_height="200dp" />
+    </LinearLayout>
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
