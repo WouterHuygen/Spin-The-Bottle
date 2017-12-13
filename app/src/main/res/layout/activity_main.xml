@@ -6,23 +6,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/woodenplank"
     tools:context="com.example.wouter.spinthebottle.MainActivity">
 
     <LinearLayout
         android:orientation="horizontal"
         android:layout_gravity="center"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp">
 
         <ImageView
             android:src="@drawable/spinrr"
-            android:layout_width="300dp"
-            android:layout_height="200dp" />
+            android:layout_width="200dp"
+            android:layout_height="100dp" />
     </LinearLayout>
-    <Button
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Hello World!" />
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnPlay"
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:text="PLAY" />
+
+            <Button
+                android:id="@+id/btnSettings"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:text="Settings" />
+
+
+    </LinearLayout>
 
 </LinearLayout>
