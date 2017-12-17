@@ -1,6 +1,7 @@
 package com.example.wouter.spinthebottle;
 
 import android.content.Intent;
+import android.media.MediaPlayer;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -8,10 +9,12 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
         // playbutton om naar  GameActivity te navigeren
         Button playbtn = (Button) findViewById(R.id.btnPlay);
         playbtn.setOnClickListener(new View.OnClickListener() {
