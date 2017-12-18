@@ -22,6 +22,7 @@ public class GameActivity extends AppCompatActivity implements SensorEventListen
     private SensorManager SensorM;
     private static final String Tag = "MainActivity";
     private static int currentstate;
+    private int Veltot = 1;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -62,8 +63,11 @@ public class GameActivity extends AppCompatActivity implements SensorEventListen
 
     @Override
     public void onSensorChanged(SensorEvent sensorEvent) {
-        Log.d(Tag, "OnSensorChanged: X :" + sensorEvent.values[0] + "Y:" + sensorEvent.values[1] + "Z:" + sensorEvent.values[2]);
-
+      //  Log.d(Tag, "OnSensorChanged: X :" + sensorEvent.values[0] + "Y:" + sensorEvent.values[1] + "Z:" + sensorEvent.values[2]);
+        for ( int j =0 ; j <= sensorEvent.values.length;  j++ ){
+            sensorEvent.values[j] *=  Veltot;
+        }
+        Log.d(Tag, "Total log values:" + Veltot);
         sensorEvent.values[1] = currentstate;
         if(sensorEvent.values[1] != currentstate) {
            // newgame.Rotateanimation(Bottle);

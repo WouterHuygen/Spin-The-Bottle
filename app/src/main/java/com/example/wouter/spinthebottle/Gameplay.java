@@ -20,8 +20,8 @@ public class Gameplay {
 
 
     public int getrotation() {
-        this.rotation+= (r.nextInt(360)+1080)-60;
-        if(rotation > 3000)
+        this.rotation+= (r.nextInt(720)+1080)-60;
+        if(rotation > 6000)
             rotation = 360+(r.nextInt(360)+720)/2;
         return rotation;
     }
