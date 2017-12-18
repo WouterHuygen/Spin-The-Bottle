@@ -66,12 +66,10 @@ public class GameActivity extends AppCompatActivity implements SensorEventListen
          float Veltot = 1;
 
         for ( int j =0 ; j < sensorEvent.values.length;  j++ ){
-            Veltot *=sensorEvent.values[j] ;
+            Veltot *=  Math.abs(sensorEvent.values[j]) ;
         }
+
+
         Log.d(Tag, "Total log values:" + Veltot);
-        sensorEvent.values[1] = currentstate;
-        if(sensorEvent.values[1] != currentstate) {
-           // newgame.Rotateanimation(Bottle);
-        }
     }
 }
