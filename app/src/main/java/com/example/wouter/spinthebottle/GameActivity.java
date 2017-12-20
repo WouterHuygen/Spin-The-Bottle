@@ -12,6 +12,7 @@ import android.view.View;
 import android.view.animation.RotateAnimation;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.lang.reflect.Type;
 import java.util.Random;
@@ -19,9 +20,11 @@ import java.util.Random;
 public class GameActivity extends AppCompatActivity implements SensorEventListener {
 
     private Sensor Accelero;
+    private int Score = 0;
     private SensorManager SensorM;
     private static final String Tag = "MainActivity";
     float Veltot;
+    TextView TeamOne ;
     Gameplay newgame = new Gameplay();
     ImageView Bottle ;
     public void RotateOnShake(Gameplay newgame, ImageView Bottle)
@@ -44,8 +47,13 @@ public class GameActivity extends AppCompatActivity implements SensorEventListen
 
         // Initializatie van buttons imageview enz..
         Button playGameBtn = (Button) findViewById(R.id.gameplaybtn);
+        TeamOne = (TextView)  findViewById(R.id.teamA);
 
 
+
+
+        //Text Verwerken van team a
+        TeamOne.setText("Team 1 :"+ Score );
         // Button Click Listner voor de game
         playGameBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -53,6 +61,8 @@ public class GameActivity extends AppCompatActivity implements SensorEventListen
                 //rotatie testen
                 System.out.println(newgame.getrotation(true, 0));
                 newgame.Rotateanimation(Bottle);
+                TeamOne.setText("Team 1 :"+ Score );
+                Score++;
 
             }
         });

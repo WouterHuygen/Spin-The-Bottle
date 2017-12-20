@@ -14,10 +14,11 @@
         android:layout_height="wrap_content">
 
         <TextView
+            android:id="@+id/teamA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Team 1 :"
-            android:textColor="@color/colorAccent"
+        android:textColor="@color/colorAccent"
             android:textSize="25dp" />
         <TextView
             android:text="Team 2 :"
