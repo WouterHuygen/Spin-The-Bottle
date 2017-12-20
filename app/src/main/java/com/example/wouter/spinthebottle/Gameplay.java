@@ -19,10 +19,17 @@ public class Gameplay {
     private int rotation = 360;
 
 
-    public int getrotation() {
-        this.rotation+= (r.nextInt(720)+1080)-60;
-        if(rotation > 6000)
-            rotation = 360+(r.nextInt(360)+720)/2;
+    public int getrotation(boolean button , float Velocity) {
+        int temp;
+        if (button) {
+            temp = (r.nextInt(720)+1080)-60;
+            rotation = 360;
+        }
+        else{
+             temp = (int)Velocity;
+             rotation = 360;
+        }
+        this.rotation+= temp;
         return rotation;
     }
     public void Rotateanimation (ImageView WhattoSpin){
