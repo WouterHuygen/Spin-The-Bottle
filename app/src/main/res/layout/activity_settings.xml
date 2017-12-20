@@ -23,22 +23,23 @@
         android:layout_width="match_parent"
         android:orientation="horizontal"
         android:layout_height="wrap_content">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textStyle="bold|italic"
+            android:text="2-Man/Team"
             android:textSize="20dp"
-            android:text="SinglePlayer/Multiplayer" />
+            android:textStyle="bold|italic" />
     </LinearLayout>
 
     <RadioButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Singleplayer" />
+        android:text="2-Man PLay" />
 
     <RadioButton
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Multyplayer" />
+        android:text="Team PLay" />
 
 </LinearLayout>

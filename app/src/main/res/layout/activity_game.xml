@@ -26,6 +26,7 @@
             android:textColor="@color/colorAccent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" />
+        //ToDo 2 Textviews aanmaken voor de exacte waarde van de teams
     </LinearLayout>
     <LinearLayout
         android:orientation="horizontal"
@@ -39,6 +40,7 @@
             android:layout_height="200dp"
             android:layout_gravity="center_horizontal"
             android:src="@drawable/doublearrow" />
+        //ToDo Rotatiepijl centreren in hat scherm
     </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
